@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: "\u80CC\u666F"
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - SHADOWCASTER
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: a3eea609fd449ae42b638e56b963b3db, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EdgeTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a3eea609fd449ae42b638e56b963b3db, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PondingMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowColor:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SketchTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaveResult:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - CharacterType: 0
+    - EdgeValue: 26
+    - MoveBase: 0
+    - MoveInfluenceYPosition: 4
+    - MoveSpeed: 0
+    - MoveStrength: 0.01
+    - NoiseScale: 1
+    - PubuWaveScale: 1
+    - Rotate: 0
+    - ShaderType: 0
+    - Vector1_985223B: 2
+    - WindBase: 0
+    - WindInfluenceYPosition: 4
+    - WindScale: 1
+    - WindSpeed: 0
+    - WindStrength: 0
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _CWHight: 0.4
+    - _CWSpeed: 0.03
+    - _CWStrange: 0.6
+    - _CWWaveStrange: 0.6
+    - _CWWidth: 0.002
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Comp: 0
+    - _Cull: 2
+    - _Cutoff: 0.492
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 10
+    - _EnvironmentReflections: 1
+    - _Fail: 0
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _HighLight: 0
+    - _HighLightColorStrange: 0.5
+    - _HighLightIntreval: 2
+    - _HighLightSize: 0.05
+    - _HighLightSpeed: 1
+    - _HightLightSwitch: 1
+    - _Main: 0
+    - _MarginWidth: 0.12
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _OutHighLightIntreval: 1
+    - _OutHightLightSize: 0.01
+    - _OutHightLightStrange: 1
+    - _OutHightLightSwitch: 1
+    - _Parallax: 0.005
+    - _Pass: 0
+    - _Ponging: 0
+    - _Queue: 0
+    - _QueueOffset: 0
+    - _RampSmoothing: 0.5
+    - _RampSmoothingOtherLights: 0.5
+    - _RampThreshold: 0.5
+    - _RampThresholdOtherLights: 0.5
+    - _Range: 0.01
+    - _RangePower: 1
+    - _ReceiveShadows: 1
+    - _RefValue: 0
+    - _RimMax: 1
+    - _RimMin: 0.5
+    - _SketchTexture_OffsetSpeed: 120
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _WaterCharacter: 0
+    - _WaterMarginPower: 1
+    - _WaterShadow_Alpha: 0.7
+    - _WorkflowMode: 1
+    - _ZWrite: 0
+    - _Zhight: 0
+    - __dummy__: 0
+    - _hight: 0
+    - _plant: 0
+    - _shadow: 0
+    - _water: 0
+    - waterRange: 0
+    - waterValue: 0.2
+    - waveValue: 1
+    m_Colors:
+    - EdgeColor: {r: 0.990566, g: 0.9765486, b: 0.9765486, a: 0}
+    - PuBuWave: {r: 0, g: 0, b: 0, a: 0}
+    - Pubu: {r: 0.9339623, g: 0.9207458, b: 0.9207458, a: 0}
+    - Size: {r: 1, g: 1, b: 0, a: 0}
+    - WaveScale0: {r: 1, g: 1, b: 0, a: 0}
+    - WaveScale1: {r: 1, g: 1, b: 0, a: 0}
+    - WindDirection: {r: 2, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CWWaterColor: {r: 0, g: 0.6591742, b: 1, a: 1}
+    - _CWWaveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
+    - _HighLightColor: {r: 1, g: 0.9889738, b: 0.17452827, a: 0}
+    - _HightLightColor: {r: 1, g: 0.9969502, b: 0.4575472, a: 1}
+    - _OutHightLightColor: {r: 1, g: 0.674681, b: 0, a: 1}
+    - _PongingColor: {r: 0.20714667, g: 0.6644456, b: 0.8962264, a: 0.6235294}
+    - _PongingOffer: {r: 0, g: 0, b: 0, a: 0}
+    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.5}
+    - _SColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _ShadowDirect: {r: 0, g: 1, b: 0, a: 0}
+    - _ShadowLight: {r: 0, g: 1, b: 0, a: 0}
+    - _SketchColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _WaterMarginColor: {r: 0.6775098, g: 0.99056596, b: 0.91097534, a: 1}
+    - _Wave0: {r: 0, g: 0, b: 0, a: 0}
+    - _WaveColor: {r: 0.3066038, g: 1, b: 0.7005225, a: 0}
+    - waterColor: {r: 0, g: 0.03999646, b: 0.8980392, a: 1}
+    - wave1: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &6384325420316804468
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 4
