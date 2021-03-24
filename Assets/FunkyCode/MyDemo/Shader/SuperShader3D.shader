@@ -19,7 +19,7 @@ Shader "SuperShader3D"
 		[Sub(_Main)][TCP2ColorNoAlpha] _HColor ("Highlight Color", Color) = (0.75,0.75,0.75,1)
 		[Sub(_Main)][TCP2ColorNoAlpha] _SColor ("Shadow Color", Color) = (0.2,0.2,0.2,1)
 		[Sub(_Main)][NoScaleOffset] _ShadowColor ("Shadow Color", 2D) = "white" {}
-		[Sub(_Main)]_BaseMap ("Albedo", 2D) = "white" {}
+		[Sub(_Main)]_MainTex ("Albedo", 2D) = "white" {}
 		[Sub(_Main)][TCP2Separator]
 
 		[Sub(_Main)][TCP2Header(Ramp Shading)]
@@ -153,7 +153,7 @@ Shader "SuperShader3D"
 		// Uniforms
 
 		// Shader Properties
-		sampler2D _BaseMap;
+		sampler2D _MainTex;
 		sampler2D _SketchTexture;
 		sampler2D _ShadowColor;
 
@@ -239,7 +239,7 @@ Shader "SuperShader3D"
 		int CharacterType;
 		float _OutlineWidth;
 		fixed4 _OutlineColorVertex;
-		float4 _BaseMap_ST;
+		float4 _MainTex_ST;
 		
 		float _RampThreshold;
 		float _RampSmoothing;
@@ -494,7 +494,7 @@ Shader "SuperShader3D"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
 				// Texture Coordinates
-				output.pack1.xy.xy = input.texcoord0.xy * _BaseMap_ST.xy + _BaseMap_ST.zw;
+				output.pack1.xy.xy = input.texcoord0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
 
 				VertexPositionInputs vertexInput = GetVertexPositionInputs(input.vertex.xyz);
 				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
@@ -554,7 +554,7 @@ Shader "SuperShader3D"
 				
 
 				// Texture Coordinates
-				output.pack1.xy.xy = input.texcoord0.xy * _BaseMap_ST.xy + _BaseMap_ST.zw;
+				output.pack1.xy.xy = input.texcoord0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
 
 
 				float TimeSpeed = _Time.y * _CWSpeed;
@@ -607,7 +607,7 @@ Shader "SuperShader3D"
 				
 
 				// Texture Coordinates
-				output.pack1.xy.xy = input.texcoord0.xy * _BaseMap_ST.xy + _BaseMap_ST.zw;
+				output.pack1.xy.xy = input.texcoord0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
 
 				VertexPositionInputs vertexInput = GetVertexPositionInputs(input.vertex.xyz);
 				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
@@ -751,7 +751,7 @@ Shader "SuperShader3D"
 
 			float4 PondingFragment(Varyings input)
 			{
-				float4 _SampleTexture2D_0_RGBA_0 = tex2D(_BaseMap, input.pack1.xy.xy).rgba;
+				float4 _SampleTexture2D_0_RGBA_0 = tex2D(_MainTex, input.pack1.xy.xy).rgba;
 				
 				float2 _Divide_0_Out_2=_PongingOffer/float2(100, 100); 
 				float2 _TilingAndOffset_0_Out_3=input.pack1.xy.xy*float2 (1, 1)+_Divide_0_Out_2; 
@@ -788,28 +788,28 @@ Shader "SuperShader3D"
 			float4 HighLightFragment(Varyings input)
 			{ 
 
-				float4 _SampleTexture2D_0_RGBA_0 = tex2D(_BaseMap, input.pack1.xy.xy).rgba;
+				float4 _SampleTexture2D_0_RGBA_0 = tex2D(_MainTex, input.pack1.xy.xy).rgba;
 				
 				float2 _Vector2_0_Out_0 = float2(_OutHightLightSize, 0);
 				float2 _TilingAndOffset_0_Out_3=input.pack1.xy.xy*float2 (1, 1)+_Vector2_0_Out_0; 
-				float4 _SampleTexture2D_1_RGBA_0 =tex2D(_BaseMap, _TilingAndOffset_0_Out_3).rgba;
+				float4 _SampleTexture2D_1_RGBA_0 =tex2D(_MainTex, _TilingAndOffset_0_Out_3).rgba;
 				
 				float _Step_1_Out_2=step(0.8, _SampleTexture2D_1_RGBA_0.a); 
 				float _Multiply_1_Out_2=_OutHightLightSize*-1; 
 				float2 _Vector2_1_Out_0 = float2(_Multiply_1_Out_2, 0);
 				float2 _TilingAndOffset_1_Out_3=input.pack1.xyxy*float2 (1, 1)+_Vector2_1_Out_0; 
-				float4 _SampleTexture2D_2_RGBA_0 = tex2D(_BaseMap, _TilingAndOffset_1_Out_3).rgba;
+				float4 _SampleTexture2D_2_RGBA_0 = tex2D(_MainTex, _TilingAndOffset_1_Out_3).rgba;
 				
 				float _Step_2_Out_2=step(0.8, _SampleTexture2D_2_RGBA_0.a); 
 				float _Add_2_Out_2=_Step_1_Out_2+_Step_2_Out_2; 
 				float2 _Vector2_2_Out_0 = float2(0, _OutHightLightSize);
 				float2 _TilingAndOffset_2_Out_3=input.pack1.xy.xy*float2 (1, 1)+_Vector2_2_Out_0; 
-				float4 _SampleTexture2D_3_RGBA_0 = tex2D(_BaseMap, _TilingAndOffset_2_Out_3).rgba;
+				float4 _SampleTexture2D_3_RGBA_0 = tex2D(_MainTex, _TilingAndOffset_2_Out_3).rgba;
 				
 				float _Step_3Out_2=step(0.8, _SampleTexture2D_3_RGBA_0.a); 
 				float2 _Vector2_3_Out_0 = float2(0, _Multiply_1_Out_2);
 				float2 _TilingAndOffset_3_Out_3=input.pack1.xy.xy*float2 (1, 1)+_Vector2_3_Out_0; 
-				float4 _SampleTexture2D_4_RGBA_0 = tex2D(_BaseMap, _TilingAndOffset_3_Out_3).rgba;
+				float4 _SampleTexture2D_4_RGBA_0 = tex2D(_MainTex, _TilingAndOffset_3_Out_3).rgba;
 				
 				float _Step_4_Out_2=step(0.8, _SampleTexture2D_4_RGBA_0.a); 
 				float _Add_4_Out_2=_Step_3Out_2+_Step_4_Out_2; 
@@ -902,7 +902,7 @@ Shader "SuperShader3D"
 				//主颜色
 				float4 _Multiply_5_Out_2=_Color*(_Color[3].xxxx);
 				
-				float4 _SampleTexture2D_MainTex_RGBA_0 = tex2D(_BaseMap, input.pack1.xy.xy).rgba;
+				float4 _SampleTexture2D_MainTex_RGBA_0 = tex2D(_MainTex, input.pack1.xy.xy).rgba;
 				
 				float4 _Multiply_6_Out_2=_Multiply_5_Out_2*(_SampleTexture2D_MainTex_RGBA_0.a.xxxx);
 				
@@ -980,7 +980,7 @@ Shader "SuperShader3D"
 				//Screen Space UV
 				float2 screenUV = GetScreenUV(input.clipPosition.xyzw.xy / input.clipPosition.xyzw.w);
 				// Shader Properties Sampling
-				float4 _albedo = ( tex2D(_BaseMap, input.pack1.xy.xy).rgba );				
+				float4 _albedo = ( tex2D(_MainTex, input.pack1.xy.xy).rgba );				
 				_albedo =  _albedo * _Color;
 				_albedo.a=	_albedo.a*_Color.a;			
 
@@ -1001,7 +1001,7 @@ Shader "SuperShader3D"
 				//Screen Space UV
 				float2 screenUV = GetScreenUV(input.clipPosition.xyzw.xy / input.clipPosition.xyzw.w);
 				// Shader Properties Sampling
-				float4 __albedo = ( tex2D(_BaseMap, input.pack1.xy.xy).rgba );
+				float4 __albedo = ( tex2D(_MainTex, input.pack1.xy.xy).rgba );
 				float4 __mainColor = ( _Color.rgba );
 				float __alpha = ( __albedo.a * __mainColor.a );
 				float __ambientIntensity = ( 1.0 );
